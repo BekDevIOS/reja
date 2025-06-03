@@ -12,6 +12,27 @@
     />
     </head>
 <body>
-    <h1>Hello world</h1>
+    <div class="container">
+        <h1 class="display-4 text-center py-1">REJA VA MAQSADLAR</h1>
+
+        <div class="jumbotron p-3 shadow-sm">
+            <form id="create-form" action="/create-item" method="POST">
+                <div class="d-flex align-items-center">
+                <input
+                    id="create-field"
+                    name="item"
+                    type="text"
+                    class="form-control mr-3"
+                    autocomplete="off"
+                    autofocus
+                    style="flex: 1"
+                />
+                <button class="btn btn-primary" style="border-radius: 20px;">
+                    Yangi Harid Qushish
+                </button>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

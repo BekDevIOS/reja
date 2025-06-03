@@ -1,0 +1,461 @@
+/* Frame style */
+.frame{
+ width: 100%;
+ height: 100%;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ background-color: rgb(229, 229, 229);
+
+}
+
+.main_frame{
+    position: relative;
+    width: 1440px;
+    height: 1315px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 2px;
+}
+
+.main_frame .left_frame{
+    position: relative;
+    width: 305px;
+    height: 1315px;
+    background: rgb(255, 255, 255);
+}
+
+.main_frame .midd_frame{
+    position: relative;
+    width: 971px;
+    height: 1315px;
+    margin-left: 34px;
+    margin-right: 22px;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.main_frame .right_frame{
+    position: relative;
+    width: 108px;
+    height: 1315px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(255, 255, 255);
+}
+
+/* Left Side style */
+/* Left side core style */
+.left_side-title{
+    position: relative;
+    color: rgb(43, 43, 43);
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 123.6%;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.left_side-subtitle{
+    color: rgb(118, 118, 118);
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+}
+
+.marginer{
+    position: relative;
+    width: 220px;
+    height: 0;
+    border: 1.5px solid rgb(240, 240, 246);
+    margin-top: 24.25px;
+    margin-left: 47px;
+    margin-bottom: 25.75px;
+}
+/* /Left side core style */
+
+.left_profile{
+    position: relative;
+    width: 228px;
+    height: 253px;
+    margin-top: 47px;
+    margin-left: 47px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left_profile-image{
+    position: relative;
+    width: 156.16px;
+    height: 135.05px;
+}
+
+.left_profile-icons{
+    position: relative;
+    width: 228px;
+    height: 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.left_profile-icon{
+    text-decoration: none;
+    display: inline-block;
+    width: 25px;
+    height: 21.6px;
+}
+
+.left_frame .marginer1{
+    position: relative;
+    width: 220px;
+    height: 0;
+    border: 1.5px solid rgb(240, 240, 246);
+    margin-top: 53.25px;
+    margin-left: 47px;
+    margin-bottom: 24.75px;
+}
+
+.left_info{
+    position: relative;
+    width: 221px;
+    height: 126px;
+    margin-left: 47px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.left_info-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.left_info-item_left{
+    background: rgb(255, 180, 0);
+    color: rgb(43, 43, 43);
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    padding-left: 5px;
+    padding-right: 6px;
+}
+
+.left_info-item_right{
+    color: rgb(43, 43, 43);
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+}
+
+.green{
+    color: rgb(126, 185, 66);
+}
+
+/* Language style */
+.left_language{
+    position: relative;
+    width: 220px;
+    height: 153px;
+    margin-left: 47px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.left_language-info{
+    height: 116px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.left_language-items{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.graph_whole{
+    border: 0.5px solid rgb(255, 180, 0);
+    border-radius: 30px;
+    position: relative;
+    width: 220px;
+    height: 4px;
+}
+
+.graph_uz{
+    position: relative;
+    width: 217px;
+    height: 2px;
+    border-radius: 30px;
+    background: rgb(255, 180, 0);
+    margin: 1px;
+}
+
+.graph_kr{
+    width: 208px;
+}
+
+.graph_en{
+    width: 190px;
+}
+/* Language style */
+
+/* Skills style */
+.left_skills{
+    position: relative;
+    width: 220px;
+    height: 242px;
+    margin-left: 47px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.left_skills-info{
+    height: 205px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.left_skills-items{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.graph_html{
+    position: relative;
+    width: 209px;
+    height: 2px;
+    border-radius: 30px;
+    background: rgb(255, 180, 0);
+    margin: 1px;
+}
+
+.graph_css{
+    width: 207px;
+}
+
+.graph_js{
+    width: 201px;
+}
+
+.graph_php{
+    width: 187px;
+}
+
+.graph_wp{
+    width: 207px;
+}
+/* Skills style */
+
+/* Extra Skills style */
+.left_extraSkills{
+    position: absolute;
+    width: 186px;
+    height: 148px;
+    margin-left: 47px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.left_extraSkills-items{
+    height: 111px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.left_extraSkills-item_icon{
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+/* Middle style */
+
+/* About section */
+.about_section{
+    position: relative;
+    width: 971px;
+    height: 454.33px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: rgb(255, 255, 255);
+}
+
+.about_section-info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    gap: 20px;
+}
+
+.about_section-info_title{
+    color: rgb(43, 43, 43);
+    font-family: Inter;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 123.6%;
+    letter-spacing: 0%;
+}
+
+.about_section-info_description{
+    color: rgb(118, 118, 118);
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+}
+
+.about_section-info_button a{
+    text-decoration: none;
+}
+
+/* My Services */
+.service_section{
+    margin-top: 148px;
+    position: relative;
+    width: 970px;
+    height: 653px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   
+}
+
+.service_section-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.service_section-info_title{
+    color: rgb(43, 43, 43);
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 123.6%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+}
+
+.service_section-info_description{
+    color: rgb(118, 118, 118);
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+}
+
+.service_section-items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 225px);
+    gap: 20px;
+}
+
+.service_section-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 15px;
+    background: rgb(255, 255, 255);
+}
+
+.service_section-item_image img{
+    position: relative;
+    width: 74px;
+    height: 74px;
+}
+
+.service_section-item_title{
+    color: rgb(43, 43, 43);
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 123.6%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+}
+
+.service_section-item_description{
+    color: rgb(118, 118, 118);
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+}
+
+.service_section-item_button a{
+    text-decoration: none;
+    color: rgb(255, 180, 0);
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+}
+
+/* Right Frame */
+.dark_mode{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.right_side-menu_item a{
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.right_side-menu{
+    position: relative;
+    width: 65px;
+    height: 493px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 174px;
+    text-align: center;
+}

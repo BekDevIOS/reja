@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js" integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Portfolio</title>
+</head>
+<body>
+    <div class="frame">
+        <div class="main_frame">
+            <div class="left_frame">
+                <div class="left_profile">
+                    <div class="left_profile-image">
+                        <img src="/author/images/profile.png" 
+                        width="156px"
+                        height="142px"
+                        alt=""
+                        />
+                    </div>
+                    <div class="left_side-title">
+                        <%=user.name%>
+                    </div>
+                    <div class="left_side-subtitle">
+                        <%=user.profession%>
+                    </div>
+                    <div class="left_profile-icons">
+                        <a class="left_profile-icon" href="">
+                            <img src="/author/icon/facebook.svg" alt="">
+                        </a>
+                        <a class="left_profile-icon" href="">
+                                <img src="/author/icon/instagram.svg" alt="">
+                        </a>
+                        <a class="left_profile-icon" href="">
+                                <img src="/author/icon/twitter.svg" alt="">
+                        </a>
+                        <a class="left_profile-icon" href="">
+                                <img src="/author/icon/linkeding.svg" alt="">
+                        </a>
+                        <a class="left_profile-icon" href="">
+                                <img src="/author/icon/youtube.svg" alt="">
+                        </a>
+                        <a class="left_profile-icon_d" href="">
+                                <img src="/author/icon/youtube.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="marginer1"></div>
+                <div class="left_info">
+                    <div class="left_info-item">
+                        <span class="left_info-item_left">Age:</span> <span class="left_info-item_right"></span><%=user.age%></span>
+                    </div>
+                    <div class="left_info-item">
+                        <span class="left_info-item_left">Residence:</span> <span class="left_info-item_right"><%=user.residence%></span>
+                    </div>
+                    <div class="left_info-item">
+                        <span class="left_info-item_left">Freelance:</span> <span class="left_info-item_right green">Avalible</span>
+                    </div>
+                    <div class="left_info-item">
+                        <span class="left_info-item_left">Address:</span> <span class="left_info-item_right"><%=user.adress%></span>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+                <div class="left_language">
+                    <div class="left_side-title">Languages</div>
+                    <div class="left_language-info">
+                        <div>
+                            <div class="left_language-items">
+                                 <span class="left_side-subtitle"><%=user.languages[0]%></span> <span class="left_side-subtitle">100%</span>
+                            </div>
+                            <div class="graph_whole">
+                                <div class="graph_uz"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="left_language-items">
+                                <span class="left_side-subtitle"><%=user.languages[1]%></span> <span class="left_side-subtitle">80%</span>
+                            </div>
+                            <div class="graph_whole">
+                                <div class="graph_kr graph_uz"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="left_language-items">
+                                <span class="left_side-subtitle"><%=user.languages[2]%></span> <span class="left_side-subtitle">60%</span>
+                            </div>
+                            <div class="graph_whole">
+                                <div class="graph_en graph_uz"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+                <div class="left_skills">
+                    <div class="left_side-title">Skills</div>
+                    <div class="left_skills-info">
+                        <div>
+                            <div class="left_skills-items">
+                                 <span class="left_side-subtitle"><%=user.skills[0]%></span> <span class="left_side-subtitle">90%</span>
+                            </div>
+                            <div class="graph_whole">
+                                <div class="graph_html"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="left_skills-items">
+                                <span class="left_side-subtitle"><%=user.skills[1]%></span> <span class="left_side-subtitle">85%</span>
+                            </div>
+                            <div class="graph_whole">
+                                <div class="graph_css graph_html"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="left_skills-items">
+                                <span class="left_side-subtitle"><%=user.skills[2]%></span> <span class="left_side-subtitle">80%</span>
+                            </div>
+                            <div class="graph_whole">
+                                <div class="graph_js graph_html"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="left_skills-items">
+                                <span class="left_side-subtitle"><%=user.skills[3]%></span> <span class="left_side-subtitle">75%</span>
+                            </div>
+                            <div class="graph_whole">
+                                <div class="graph_php graph_html"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="left_skills-items">
+                                <span class="left_side-subtitle"><%=user.skills[4]%></span> <span class="left_side-subtitle">85%</span>
+                            </div>
+                            <div class="graph_whole">
+                                <div class="graph_wp graph_html"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+                <div class="left_extraSkills">
+                    <div class="left_side-title"> Extra Skills</div>
+                    <div class="left_extraSkills-info">
+                        <div class="left_extraSkills-items">
+                           <div>
+                                <img class="left_extraSkills-item_icon" src="/author/icon/left_icon.svg"alt="icon"/>
+                                <span class="left_side-subtitle"><%=user.extra_skills[0]%></span>
+                           </div>
+                           <div>
+                                <img class="left_extraSkills-item_icon" src="/author/icon/left_icon.svg"alt="icon"/>
+                                <span class="left_side-subtitle"><%=user.extra_skills[1]%></span>
+                           </div>
+                           <div>
+                                <img class="left_extraSkills-item_icon" src="/author/icon/left_icon.svg"alt="icon"/>
+                                <span class="left_side-subtitle"><%=user.extra_skills[2]%></span>
+                           </div>
+                           <div>
+                                <img class="left_extraSkills-item_icon" src="/author/icon/left_icon.svg"alt="icon"/>
+                                <span class="left_side-subtitle"><%=user.extra_skills[3]%></span>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="midd_frame">
+                <div class="about_section">
+                    <div class="about_section-info">
+                        <div class="about_section-info_title"><%=user.work_place%></div>
+                        <div class="about_section-info_description"><%=user.about_me%></div>
+                        <div class="about_section-info_button">
+                            <a href="">
+                                <img src="/author/btn_icon/button_book.svg" 
+                                width: 154px;
+                                height: 151px;
+                                alt = "button"
+                                />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="about_section-image">
+                        <img src="/author/images/personal.png" alt="image">
+                    </div>
+                </div>
+                <div class="service_section">
+                    <div  class="service_section-info">
+                        <div class="service_section-info_title">My Services</div>
+                        <div class="service_section-info_description">Amet minim mollit non deserunt ullamco est sit aliqua dolor <br> do amet sint. Velit officia consequat. Duis Enim Veilt Mollit.<br> Lorem ipsum</div>
+                    </div>
+                    <div class="service_section-items">
+                        <div class="service_section-item">
+                            <div class="service_section-item_image">
+                                <img src="/author/box_images/web_icon.png" alt = "image">
+                            </div>
+                            <div class="service_section-item_title">Web Development</div>
+                            <div class="service_section-item_description">Blog, E-commerce</div>
+                        </div>
+                        <div class="service_section-item">
+                            <div class="service_section-item_image">
+                                <img src="/author/box_images/ux_icon.png" alt = "image">
+                            </div>
+                            <div class="service_section-item_title">UI/UX Design</div>
+                            <div class="service_section-item_description">Mobile app, website design</div>
+                        </div>
+                        <div class="service_section-item">
+                            <div class="service_section-item_image">
+                                <img src="/author/box_images/sound_icon.png" alt = "image">
+                            </div>
+                            <div class="service_section-item_title">Sound design</div>
+                            <div class="service_section-item_description">voice over,  beat making</div>
+                        </div>
+                        <div class="service_section-item">
+                            <div class="service_section-item_image">
+                                <img src="/author/box_images/game_icon.png" alt = "image">
+                            </div>
+                            <div class="service_section-item_title">game design</div>
+                            <div class="service_section-item_description">charachter design, props & objects</div>
+                        </div>
+                        <div class="service_section-item">
+                            <div class="service_section-item_image">
+                                <img src="/author/box_images/photography_icon.png" alt = "image">
+                            </div>
+                            <div class="service_section-item_title">photography</div>
+                            <div class="service_section-item_description">portrait, product photography</div>
+                        </div>
+                        <div class="service_section-item">
+                            <div class="service_section-item_title">advertising</div>
+                            <div class="service_section-item_description">Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit. vitae<br> nulla diam in ac dictum a<br> urna viverra morbi.</div>
+                            <div class="service_section-item_button"><a href="">order now > </a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right_frame">
+                <div class="dark_mode">
+                    <img src="/author/icon/Contrast.svg"
+                    width="30px"
+                    height="30px"
+                    alt = "darkMode"
+                    />
+                </div>
+                <div class="right_side-menu">
+                    <div class="right_side-menu_item">
+                        <a href="">
+                            <img src="/author/icon/Home.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="right_side-menu_item">
+                        <a href="">
+                            <img src="/author/icon/Service.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="right_side-menu_item">
+                        <a href="">
+                            <img src="/author/icon/Cv.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="right_side-menu_item">
+                        <a href="">
+                            <img src="/author/icon/Portfolio.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="right_side-menu_item">
+                        <a href="">
+                            <img src="/author/icon/blog.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="right_side-menu_item">
+                        <a href="">
+                            <img src="/author/icon/Contact.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
