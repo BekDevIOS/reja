@@ -1,3 +1,20 @@
+////////////////////// MITASK A ////////////////////////////
+
+function coutLetter(a,  text){
+    let sum = 0;
+    for(ele of text.split("")){
+        if(a == ele){
+            sum++;
+        }
+    }
+    return sum;
+};
+
+const result = coutLetter(4, 'gjsl34kjs44lfgdjk49083jk754lgjdfljds44hfgk932');
+console.log("Result of MITASK A: ", result);
+
+
+
 console.log("Jack Ma maslahatlari");
 const list = [
   "yaxshi talaba boling", // 0–20
@@ -26,7 +43,7 @@ function maslahatBering(a, callBack) {
 }
 
 console.log('Passed here 0')
-maslahatBering(65, (err, data) => {
+maslahatBering(35, (err, data) => {
     if(err) console.log('ERROR:', err);
     console.log('Result:', data);
 })
