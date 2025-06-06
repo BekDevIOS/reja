@@ -1,53 +1,93 @@
-////////////////////// MITASK A ////////////////////////////
-
-function coutLetter(a,  text){
-    let sum = 0;
+////////////////////// MITASK B ////////////////////////////
+// after searching net sources
+function isNumber2(text){
+    let count = 0;
     for(ele of text.split("")){
-        if(a == ele){
-            sum++;
+        if(!isNaN(ele)){
+            count++
         }
     }
-    return sum;
+    return count;
 };
 
-const result = coutLetter(4, 'gjsl34kjs44lfgdjk49083jk754lgjdfljds44hfgk932');
-console.log("Result of MITASK A: ", result);
+const result2 = isNumber2('sdfjjkah23jkh234jk24');
+console.log('result2: ', result2);
 
 
-
-console.log("Jack Ma maslahatlari");
-const list = [
-  "yaxshi talaba boling", // 0–20
-  "togri boshliq tanlang va koproq hato qiling", // 20–30
-  "uzingizga ishlashingizni boshlang", // 30–40
-  "siz kuchli bolgan narsalarni qiling", // 40–50
-  "yoshlarga investitsiya qiling", // 50–60
-  "endi dam oling, foydasi yoq endi", // 60
-];
-
-
-
-// event loop & callBack
-function maslahatBering(a, callBack) {
-    if(typeof a !== "number") callBack("Insert a number", null);
-    else if(a<=20) callBack(null, list[0]);
-    else if(a>20 & a<=30) callBack(null, list[1]);
-    else if(a>30 & a<=40) callBack(null, list[2]);
-    else if(a>40 & a<=50) callBack(null, list[3]);
-    else if(a>50 & a<=60) callBack(null, list[4]);
-    else {
-        setInterval(() => {
-            callBack(null, list[5]);
-        }, 1000);
+// my first solution 
+function isNumber(text){
+    let count = 0;
+    for(ele of text.split("")){
+        for(let i = 0; i <= 9; i++){
+            if(ele == i) count++;
+        }
     }
-}
+    return count;
+};
 
-console.log('Passed here 0')
-maslahatBering(35, (err, data) => {
-    if(err) console.log('ERROR:', err);
-    console.log('Result:', data);
-})
-console.log('Passed here 1')
+const result = isNumber('jss3d34gdhkhs23hj32jh23');
+console.log('result1: ', result);
+
+
+
+
+
+
+
+
+
+
+
+////////////////////// MITASK A ////////////////////////////
+
+// function coutLetter(a,  text){
+//     let sum = 0;
+//     for(ele of text.split("")){
+//         if(a == ele){
+//             sum++;
+//         }
+//     }
+//     return sum;
+// };
+
+// const result = coutLetter(4, 'gjsl34kjs44lfgdjk49083jk754lgjdfljds44hfgk932');
+// console.log("Result of MITASK A: ", result);
+
+
+
+// console.log("Jack Ma maslahatlari");
+// const list = [
+//   "yaxshi talaba boling", // 0–20
+//   "togri boshliq tanlang va koproq hato qiling", // 20–30
+//   "uzingizga ishlashingizni boshlang", // 30–40
+//   "siz kuchli bolgan narsalarni qiling", // 40–50
+//   "yoshlarga investitsiya qiling", // 50–60
+//   "endi dam oling, foydasi yoq endi", // 60
+// ];
+
+
+
+// // event loop & callBack
+// function maslahatBering(a, callBack) {
+//     if(typeof a !== "number") callBack("Insert a number", null);
+//     else if(a<=20) callBack(null, list[0]);
+//     else if(a>20 & a<=30) callBack(null, list[1]);
+//     else if(a>30 & a<=40) callBack(null, list[2]);
+//     else if(a>40 & a<=50) callBack(null, list[3]);
+//     else if(a>50 & a<=60) callBack(null, list[4]);
+//     else {
+//         setInterval(() => {
+//             callBack(null, list[5]);
+//         }, 1000);
+//     }
+// }
+
+// console.log('Passed here 0')
+// maslahatBering(35, (err, data) => {
+//     if(err) console.log('ERROR:', err);
+//     console.log('Result:', data);
+// })
+// console.log('Passed here 1')
 
 
 // // ASYNC function
