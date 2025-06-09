@@ -14,6 +14,7 @@ fs.readFile("database/user.json", "utf-8", (err, data) => {
 
 // MongoDB connect
 const db = require('./server');
+const mongodb = require('mongodb');
 
 // 1: Kirish code
 app.use(express.static('public'));
@@ -36,6 +37,14 @@ app.post('/create-item', (req, res) => {
         res.json(data.ops[0]);
     });
 });
+
+// delete-item
+app.post('/delete-item', (req, res) => {
+    const id = req.body.id;
+    db.collection('plans').deleteOne({_id: new mongodb.ObjectId(id)}, function(err, data){
+        res.json({state: 'Jay just do more'});
+    })
+})
 
 // render  resume
 app.get('/author', function (req, res) {

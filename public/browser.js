@@ -35,3 +35,18 @@ document.getElementById("create-form").addEventListener("submit", function(e){
     })
     .catch(err => {"Iltimos qaytadan urinib koring"});
 });
+
+
+document.addEventListener('click', function(e){
+    // delete oper
+    if(e.target.classList.contains('delete-me')){
+        if(confirm("Are you sure to delete?")){
+             axios.post('/delete-item', {id: e.target.getAttribute('data-id')})
+            .then(response => {
+                console.log(response.data);
+                e.target.parentElement.parentElement.remove();
+            })
+            .catch(err => {});
+        };
+    }
+})
