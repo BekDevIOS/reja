@@ -10,7 +10,8 @@ mongodb.connect(connectionString, {
     if(err) console.log("ERROR on connection MongoDB");
     else {
         console.log("MongoDB connection succeed")
-        module.exports = client;
+        const db = client.db('reja')
+        module.exports = db;
         const app = require('./app');
         const server = http.createServer(app);
         let PORT = 3000;
