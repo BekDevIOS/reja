@@ -57,7 +57,6 @@ document.addEventListener('click', function(e){
   const currentText = span.innerText;
   const newValue = prompt("Input new value:", currentText);
     
-  
   if (newValue) {
     axios.post('/update-item', {
         id: e.target.getAttribute("data-id"),
@@ -70,5 +69,18 @@ document.addEventListener('click', function(e){
             console.log("Something went wrong")
         });
         }
+    }
+})
+
+// delete all
+document.getElementById('clean-all').addEventListener('click', function(e){
+    if(confirm('Are you sure te delete all items?')){
+        axios.post('/delete-all')
+        .then((response) => {
+            document.getElementById('item-list').innerHTML = "";
+        })
+        .catch((err) => {
+            console.log('ERROR:', err);
+        });
     }
 })

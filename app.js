@@ -58,6 +58,12 @@ app.post('/update-item', (req, res) => {
     res.json({success: "done"});
 })
 
+// Delete-all
+app.post('/delete-all', (req, res) => {
+    db.collection('plans').deleteMany({});
+    res.json({success: 'done'});
+})
+
 // render  resume
 app.get('/author', function (req, res) {
     res.render('author', {user: user});
