@@ -29,6 +29,7 @@ app.set('views', 'views');
 app.set('view engine', 'ejs');
 
 // 4: Routing code
+// Create
 app.post('/create-item', (req, res) => {
     console.log(req.body);
     const new_reja = req.body.reja;
@@ -38,7 +39,7 @@ app.post('/create-item', (req, res) => {
     });
 });
 
-// delete-item
+// Delete
 app.post('/delete-item', (req, res) => {
     const id = req.body.id;
     db.collection('plans').deleteOne({_id: new mongodb.ObjectId(id)}, function(err, data){
