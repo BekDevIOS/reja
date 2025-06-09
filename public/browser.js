@@ -49,4 +49,26 @@ document.addEventListener('click', function(e){
             .catch(err => {});
         };
     }
+
+    // update oper
+    if (e.target.classList.contains("edit-me")) {
+  const li = e.target.closest("li");
+  const span = li.querySelector(".item-text");
+  const currentText = span.innerText;
+  const newValue = prompt("Input new value:", currentText);
+    
+  
+  if (newValue) {
+    axios.post('/update-item', {
+        id: e.target.getAttribute("data-id"),
+        reja: newValue.trim()
+        })
+        .then((response) => {
+            span.innerText = newValue.trim();
+            })
+        .catch(err => {
+            console.log("Something went wrong")
+        });
+        }
+    }
 })

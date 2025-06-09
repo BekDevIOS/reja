@@ -47,6 +47,17 @@ app.post('/delete-item', (req, res) => {
     })
 })
 
+// Update
+app.post('/update-item', (req, res) => {
+    const id = req.body.id;
+    const value = req.body.reja
+    db.collection('plans').updateOne(
+        {_id: new mongodb.ObjectId(id)},
+        {$set: {reja: value}}
+    );
+    res.json({success: "done"});
+})
+
 // render  resume
 app.get('/author', function (req, res) {
     res.render('author', {user: user});
