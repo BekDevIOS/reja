@@ -1,3 +1,4 @@
+const { default: axios } = require("axios");
 
 console.log('Frontend JS');
 
@@ -34,6 +35,27 @@ document.getElementById("create-form").addEventListener("submit", function(e){
         createField.focus();
     })
     .catch(err => {"Iltimos qaytadan urinib koring"});
+});
+
+document.addEventListener('change', function(e){
+    if (e.target.classList.contains('complate-checkbox')){
+        const checkbox = e.target;
+        const id = checkbox.getAttribute('data-id');
+        const complated = checkbox.checked;
+        axios
+      .post("/toggle-completed", { id: id, completed: completed })
+      .then(() => {
+        const textEl = checkbox.closest("li").querySelector(".item-text");
+        if (completed) {
+          textEl.classList.add("text-decoration-line-through", "text-muted");
+        } else {
+          textEl.classList.remove("text-decoration-line-through", "text-muted");
+        }
+      })
+      .catch(() => {
+        alert("✅ holatini yangilashda xatolik");
+      });
+  }
 });
 
 
