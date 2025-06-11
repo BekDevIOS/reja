@@ -1,32 +1,65 @@
+////////////////////// MITASK C ////////////////////////////
+
+function checkContent(a, b){
+    let result = false;
+    for(ele of a.split('')){
+           result = b.split('').some((val) => {
+               return val == ele;
+            });
+    };
+    for(ele of b.split('')){
+           result = a.split('').some((val) => {
+               return val == ele;
+            });
+    }
+    return result;
+}
+
+const check1 = checkContent("Jaa", "ajy")
+console.log('check1: ', check1);
+
+const check2 = checkContent("Jay", "ajy")
+console.log('check2: ', check2);
+
+
+
+
+
+
+
+
+
+
+
 ////////////////////// MITASK B ////////////////////////////
-// after searching net sources
-function isNumber2(text){
-    let count = 0;
-    for(ele of text.split("")){
-        if(!isNaN(ele)){
-            count++
-        }
-    }
-    return count;
-};
+// // after searching net sources
+// function isNumber2(text){
+//     let count = 0;
+//     for(ele of text.split("")){
+//         if(!isNaN(ele)){
+//             count++
+//         }
+//     }
+//     return count;
+// };
 
-const result2 = isNumber2('sdfjjkah23jkh234jk24');
-console.log('result2: ', result2);
+// const result2 = isNumber2('sdfjjkah23jkh234jk24');
+// console.log('result2: ', result2);
 
 
-// my first solution 
-function isNumber(text){
-    let count = 0;
-    for(ele of text.split("")){
-        for(let i = 0; i <= 9; i++){
-            if(ele == i) count++;
-        }
-    }
-    return count;
-};
+// // my first solution 
+// function isNumber(text){
+//     let count = 0;
+//     for(ele of text.split("")){
+//         for(let i = 0; i <= 9; i++){
+//             if(ele == i) count++;
+//         }
+//     }
+//     return count;
+// };
 
-const result = isNumber('jss3d34gdhkhs23hj32jh23');
-console.log('result1: ', result);
+// const result = isNumber('jss3d34gdhkhs23hj32jh23');
+// console.log('result1: ', result);
 
 
 
