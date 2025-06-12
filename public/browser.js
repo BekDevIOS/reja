@@ -1,31 +1,24 @@
-const { default: axios } = require("axios");
-
 console.log('Frontend JS');
 
 function itemTemplate(item){
-    return  `<li class="list-group-item list-group-item-info d-flex align-items-center justify-content-between">
-                <span class="item-text">${item.reja}</span>
-                <div>
-                    <button 
-                        data-id="${item._id}"
-                        class="edit-me btn btn-secondary btn-sm mr-1"
-                    >
-                        Ozgartirish
-                    </button>
-                    <button
-                        data-id="${item._id}"
-                        class="delete-me btn btn-danger btn-sm"
-                    >
-                        Ochirish
-                    </button>
-                </div>
-            </li>`;
+    return  `<li class="list-group-item d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center gap-2">
+      <input type="checkbox" class="complete-checkbox" data-id="${item._id }" ${item.completed ? 'checked' : ''}>
+      <span class="item-text ${item.completed ? 'text-decoration-line-through text-muted' : '' }">
+        ${ item.reja }
+      </span>
+    </div>
+    <div class="d-flex gap-2">
+      <button data-id="${item._id }" class="edit-me btn btn-sm btn-outline-secondary">✏️</button>
+      <button data-id="${item._id }" class="delete-me btn btn-sm btn-outline-danger">🗑️</button>
+    </div>
+  </li>`;
 }
 
 let createField = document.getElementById("create-field");
-
+// Create oper
 document.getElementById("create-form").addEventListener("submit", function(e){
-      e.preventDefault();
+    e.preventDefault();
     axios.post("/create-item", {reja: createField.value})
     .then(response => {
         document
@@ -36,14 +29,14 @@ document.getElementById("create-form").addEventListener("submit", function(e){
     })
     .catch(err => {"Iltimos qaytadan urinib koring"});
 });
-
+// Checkbox oper
 document.addEventListener('change', function(e){
-    if (e.target.classList.contains('complate-checkbox')){
+    if (e.target.classList.contains('complete-checkbox')){
         const checkbox = e.target;
         const id = checkbox.getAttribute('data-id');
-        const complated = checkbox.checked;
+        const completed = checkbox.checked;
         axios
-      .post("/toggle-completed", { id: id, completed: completed })
+      .post("/checkbox-item", { id: id, completed: completed })
       .then(() => {
         const textEl = checkbox.closest("li").querySelector(".item-text");
         if (completed) {
@@ -53,14 +46,13 @@ document.addEventListener('change', function(e){
         }
       })
       .catch(() => {
-        alert("✅ holatini yangilashda xatolik");
+        alert("Somthing went wrong in checkbox part!");
       });
   }
 });
 
-
 document.addEventListener('click', function(e){
-    // delete oper
+    // Delete oper
     if(e.target.classList.contains('delete-me')){
         if(confirm("Are you sure to delete?")){
              axios.post('/delete-item', {id: e.target.getAttribute('data-id')})
@@ -72,7 +64,7 @@ document.addEventListener('click', function(e){
         };
     }
 
-    // update oper
+    // Update oper
     if (e.target.classList.contains("edit-me")) {
   const li = e.target.closest("li");
   const span = li.querySelector(".item-text");
@@ -94,7 +86,7 @@ document.addEventListener('click', function(e){
     }
 })
 
-// delete all
+// Delete all
 document.getElementById('clean-all').addEventListener('click', function(e){
     if(confirm('Are you sure te delete all items?')){
         axios.post('/delete-all')

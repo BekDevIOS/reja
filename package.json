@@ -4,7 +4,7 @@
   "description": "This is our first project",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "nodemon server.js",
     "dev": "nodemon server.js",
     "train": "nodemon train.js",
     "app": "nodemon app.js",
@@ -14,8 +14,10 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^1.9.0",
+    "bcrypt": "^6.0.0",
     "ejs": "^3.1.10",
     "express": "^4.17.3",
+    "express-session": "^1.18.1",
     "mongodb": "^3.2.6"
   }
 }
