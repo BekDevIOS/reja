@@ -1,25 +1,75 @@
+////////////////////// MITASK D ////////////////////////////
+const moment = require('moment');
+
+class Shop {
+    #olma;
+    #banana;
+    #kivi;
+
+    constructor(olma, banana, kivi){
+        this.#olma = olma,
+        this.#banana = banana,
+        this.#kivi = kivi
+    };
+
+    qoldiq(){
+        console.log(`Hozir ${moment().format('HH:MM')} da ${this.#olma}ta olma, ${this.#banana}ta banan va ${this.#kivi}ta kivi mavjud!`); 
+    }
+
+    sotish(a){
+        this.#olma -= a;
+    }
+
+    qabul(b){
+        this.#banana += b;
+    }
+};
+
+const shop = new Shop(7, 9, 4);
+
+shop.qoldiq();
+shop.sotish(3);
+shop.qabul(6);
+shop.qoldiq();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ////////////////////// MITASK C ////////////////////////////
 
-function checkContent(a, b){
-    let result = false;
-    for(ele of a.split('')){
-           result = b.split('').some((val) => {
-               return val == ele;
-            });
-    };
-    for(ele of b.split('')){
-           result = a.split('').some((val) => {
-               return val == ele;
-            });
-    }
-    return result;
-}
+// function checkContent(a, b){
+//     let result = false;
+//     for(ele of a.split('')){
+//            result = b.split('').some((val) => {
+//                return val == ele;
+//             });
+//     };
+//     for(ele of b.split('')){
+//            result = a.split('').some((val) => {
+//                return val == ele;
+//             });
+//     }
+//     return result;
+// }
 
-const check1 = checkContent("Jaa", "ajy")
-console.log('check1: ', check1);
+// const check1 = checkContent("Jaa", "ajy")
+// console.log('check1: ', check1);
 
-const check2 = checkContent("Jay", "ajy")
-console.log('check2: ', check2);
+// const check2 = checkContent("Jay", "ajy")
+// console.log('check2: ', check2);
 
 
 
