@@ -1,36 +1,57 @@
-////////////////////// MITASK D ////////////////////////////
-const moment = require('moment');
-
-class Shop {
-    #olma;
-    #banana;
-    #kivi;
-
-    constructor(olma, banana, kivi){
-        this.#olma = olma,
-        this.#banana = banana,
-        this.#kivi = kivi
-    };
-
-    qoldiq(){
-        console.log(`Hozir ${moment().format('HH:MM')} da ${this.#olma}ta olma, ${this.#banana}ta banan va ${this.#kivi}ta kivi mavjud!`); 
+////////////////////// MITASK E ////////////////////////////
+function getReverse(a){
+    let newArr = [];
+    for(ele of a.split('')){
+        newArr.unshift(ele);
     }
-
-    sotish(a){
-        this.#olma -= a;
-    }
-
-    qabul(b){
-        this.#banana += b;
-    }
+    return newArr.join('');
 };
 
-const shop = new Shop(7, 9, 4);
+const result = getReverse('Utkirbek');
+console.log('result: ', result);
 
-shop.qoldiq();
-shop.sotish(3);
-shop.qabul(6);
-shop.qoldiq();
+
+
+
+
+
+
+
+
+
+////////////////////// MITASK D ////////////////////////////
+// const moment = require('moment');
+
+// class Shop {
+//     #olma;
+//     #banana;
+//     #kivi;
+
+//     constructor(olma, banana, kivi){
+//         this.#olma = olma,
+//         this.#banana = banana,
+//         this.#kivi = kivi
+//     };
+
+//     qoldiq(){
+//         console.log(`Hozir ${moment().format('HH:MM')} da ${this.#olma}ta olma, ${this.#banana}ta banan va ${this.#kivi}ta kivi mavjud!`); 
+//     }
+
+//     sotish(a){
+//         this.#olma -= a;
+//     }
+
+//     qabul(b){
+//         this.#banana += b;
+//     }
+// };
+
+// const shop = new Shop(7, 9, 4);
+
+// shop.qoldiq();
+// shop.sotish(3);
+// shop.qabul(6);
+// shop.qoldiq();
 
 
 
