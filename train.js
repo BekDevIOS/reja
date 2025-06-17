@@ -1,14 +1,40 @@
-////////////////////// MITASK E ////////////////////////////
-function getReverse(a){
-    let newArr = [];
-    for(ele of a.split('')){
-        newArr.unshift(ele);
-    }
-    return newArr.join('');
-};
 
-const result = getReverse('Utkirbek');
+////////////////////// MITASK F ////////////////////////////
+
+function findDoublers(text){
+    const finder = text.split('').some((ele, index, arr)=>{
+        return ele === arr[index+1];
+    })
+    return finder;
+}
+
+const result = findDoublers('hello');
 console.log('result: ', result);
+
+const result2 = findDoublers('Utkirbek');
+console.log('result2: ', result2);
+
+
+
+
+
+
+
+
+
+
+
+////////////////////// MITASK E ////////////////////////////
+// function getReverse(a){
+//     let newArr = [];
+//     for(ele of a.split('')){
+//         newArr.unshift(ele);
+//     }
+//     return newArr.join('');
+// };
+
+// const result = getReverse('Utkirbek');
+// console.log('result: ', result);
 
 
 
